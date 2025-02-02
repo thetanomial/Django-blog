@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Logged Out{% endblock %}
+
+{% block content %}
+    <div class="text-center mt-5">
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Logged Out Successfully!</h4>
+            <p>You have been logged out. Thank you for visiting!</p>
+            <hr>
+            <p class="mb-0">Go back to <a href="{% url 'blog_list' %}" class="btn btn-link">Home</a> or <a href="{% url 'login' %}" class="btn btn-link">Login</a> again.</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Create a Blog Post</h2>
+  <form method="post" id="blogForm">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" id="createBtn">Create</button>
+  </form>
+
+  <script>
+    document.addEventListener("keydown", function(event) {
+        if ((event.ctrlKey || event.metaKey) && event.key === "Enter") {
+            document.getElementById("createBtn").click();
+        }
+    });
+  </script>
+{% endblock %}
