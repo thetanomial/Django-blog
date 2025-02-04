@@ -7,7 +7,7 @@ cd /var/www/Django-blog || exit
 
 # Pull the latest changes from Git
 echo "📥 Pulling latest code from Git..."
-git pull origin master  # Change 'main' to your actual branch
+git pull origin master  # Change 'master' to your actual branch
 
 # Activate the virtual environment
 echo "🐍 Activating virtual environment..."
