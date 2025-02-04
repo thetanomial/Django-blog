@@ -7,7 +7,7 @@ cd /var/www/Django-blog || exit
 
 # Pull the latest changes from Git
 echo "📥 Pulling latest code from Git..."
-git pull origin main  # Change 'main' to your actual branch
+git pull origin master  # Change 'main' to your actual branch
 
 # Activate the virtual environment
 echo "🐍 Activating virtual environment..."
@@ -27,6 +27,8 @@ python manage.py collectstatic --noinput
 
 # Restart Gunicorn and Nginx
 echo "🔄 Restarting Gunicorn and Nginx..."
+
+sudo systemctl daemon-reload
 sudo systemctl restart gunicorn
 sudo systemctl restart nginx
 
